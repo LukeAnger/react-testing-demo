@@ -1,5 +1,18 @@
 # mern-stack-template
 
+We will be adding the following dependencies for production:
+react
+react-dom
+mongoose
+express
+axios
+
+```
+npm install mongoose express react react-dom axios
+```
+
+these will all install the newest versions, so if you need an older version then you will have to search that install command yourself
+
 index.html
 
 ```
