@@ -4,7 +4,8 @@
   "description": "Template for starting a basic MERN stack project",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "dev": "webpack serve --open"
   },
   "repository": {
     "type": "git",

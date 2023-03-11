@@ -16,7 +16,7 @@ these will all install the newest versions, so if you need an older version then
 
 These are the development dependencies
 ```
-npm install @babel/core @babel/preset-env @babel/preset-react babel-loader css-loader style-loader webpack webpack-cli webpack-dev-server
+npm install @babel/core @babel/preset-env @babel/preset-react babel-loader css-loader style-loader webpack webpack-cli webpack-dev-server --dev
 ```
 
 index.html
