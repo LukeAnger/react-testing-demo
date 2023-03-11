@@ -13,6 +13,12 @@ npm install mongoose express react react-dom axios
 
 these will all install the newest versions, so if you need an older version then you will have to search that install command yourself
 
+
+These are the development dependencies
+```
+npm install @babel/core @babel/preset-env @babel/preset-react babel-loader css-loader style-loader webpack webpack-cli webpack-dev-server
+```
+
 index.html
 
 ```
