@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 
-const query = 'stephen'
+const query = 'batman'
 
 axios.get(`http://localhost:8080/get?name=${query}`)
   .then(res => {
