@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 
 const ShowNames = ({ names }) => {
   if (names.length === 0) return null;
+  console.log('SHOW NAMES: ', names)
   return (
     <ul>
       {names.map((name, i) => (

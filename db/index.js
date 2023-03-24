@@ -7,6 +7,7 @@ const db = mongoose.connection
 
 const nameSchema = mongoose.Schema({
   name: String,
+  age: Number,
 })
 
 const Name = mongoose.model('Name', nameSchema)

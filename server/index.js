@@ -17,7 +17,6 @@ app.get('/get', (req, res) => {
   console.log('GET HEARD!', req.query)
   db.Name.find()
     .then(response => {
-      console.log('NAME FIND: ', response)
       res.send(response)
     })
     .catch(err => res.send('GET request was NOT successful'))
@@ -25,7 +24,7 @@ app.get('/get', (req, res) => {
 })
 
 app.post('/post', (req, res) => {
-  console.log('POST HEARD!', req.query)
+  console.log('POST HEARD!', req.body)
   db.save(req.body)
   res.send('POST request was successful')
 })

@@ -1,7 +1,7 @@
 import React , { useState, useEffect } from 'react'
 import axios from 'axios'
 
-import AddName from './components/AddName.jsx'
+import AddPerson from './components/AddPerson.jsx'
 import ShowNames from './components/ShowNames.jsx'
 
 const query = 'batman'
@@ -27,12 +27,12 @@ const App = () => {
     fetchNames()
   }, [])
 
-  const addName = (name) => {
-    console.log({name: name})
-    axios.post(`http://localhost:8080/post`, {name: name})
+  const addPerson = (obj) => {
+    console.log('CHECK ADDING OF NAME: ', names, name)
+    axios.post(`http://localhost:8080/post`, obj)
       .then(res => {
-        console.log(res)
-        setNames([...names, name])
+        console.log('CHECK ADDING OF NAME: ', names, name)
+        setNames([...names, obj])
       })
   }
 
@@ -42,10 +42,10 @@ const App = () => {
 
 
     return (
-      <div>
-        <div>Hola Mundo</div>
+      <div style={{display: 'flex', gap: '2%'}}>
+
+        <AddPerson name={name} addPerson={addPerson} />
         <ShowNames names={names} />
-        <AddName name={name} addName={addName} />
       </div>
     )
 }
