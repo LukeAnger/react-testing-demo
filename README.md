@@ -83,7 +83,7 @@ Here are some examples of how you might use React Testing Library methods in you
 * `findAllBy`: Similar to `getAllBy`, but waits for the elements to appear on the page.
 * `queryAllBy`: Finds all elements in the component's DOM that match a specific query, but returns an empty array if no elements are found.
 * `getByRole`: Finds an element by its ARIA role (e.g. `getByRole('button')` finds the first button element). This is useful for testing accessibility.
-
+  * reference this [link](https://www.w3.org/TR/html-aria/#docconformance) for default html tag "roles" that you can use in the `getByRole` method.
 These methods are all part of React Testing Library's API for interacting with a component's DOM. By using these methods, you can find and interact with elements in your component and test its behavior and functionality.
 
 ### Example Tests

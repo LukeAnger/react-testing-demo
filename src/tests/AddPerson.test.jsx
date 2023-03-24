@@ -59,6 +59,6 @@ describe('AddPerson', () => {
     expect(nameInput).toHaveValue('');
 
     // assert that the age field was reset
-    expect(ageInput).toHaveValue('');
+    expect(ageInput).toHaveValue(null);
   });
 });
