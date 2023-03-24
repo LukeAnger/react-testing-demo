@@ -41,7 +41,7 @@ This will start a local development server, express server and mongodb that you 
 
 to run the tests for this application, simply run `npm test`:
 
-This will run all of the unit tests for the application using Jest and React Testing Library. You can find the test files in the `src/__tests__` directory.
+This will run all of the unit tests for the application using Jest and React Testing Library. You can find the test files in the `src/tests` directory.
 
 Thanks for checking out this React Testing Demo repository! If you have any questions or feedback, feel free to reach out.
 
