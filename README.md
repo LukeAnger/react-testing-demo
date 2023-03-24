@@ -64,13 +64,15 @@ React Testing Library provides a set of methods for interacting with React compo
 
 Here are some examples of how you might use React Testing Library methods in your tests:
 
+#### Utilities Functions
+
 * `render`: Renders a React component and returns an object that you can use to interact with the component in your tests.
 * `fireEvent`: Simulates a user interaction (e.g. clicking a button, entering text into a form).
 * `screen`: Provides a set of methods for querying the rendered output of your component (e.g. screen.getByText to find an element with specific text).
 * `waitFor`: Allows you to wait for asynchronous events (e.g. a component to update its state or fetch data from an API).
 
 
-##### Queries
+#### Queries
 
 * `getBy`: Finds a single element in the component's DOM by a specific query (e.g. `getByTestId` finds an element by its data-testid attribute).
 * `findBy`: Similar to `getBy`, but waits for the element to appear on the page (e.g. `findByText` waits for an element with specific text to appear).
@@ -133,7 +135,7 @@ In the third test, we use `jest.spyOn` to mock the `fetch` function and return s
 
 These are just a few examples of the types of tests you might write for a React application. With React Testing Library, there are many more methods and approaches you can use to test your components and ensure that your application is working as expected.
 
-### Conclusion
+## Conclusion
 Thanks for taking the time to check out this React Testing Demo repository! We hope that this demo has given you a good understanding of how to write tests for your React applications and how to use Jest and React Testing Library to test your components.
 
 If you have any questions or feedback, feel free to reach out to us. Happy testing!
