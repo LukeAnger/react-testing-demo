@@ -3,36 +3,35 @@ import axios from 'axios'
 
 import AddPerson from './components/AddPerson.jsx'
 import ShowNames from './components/ShowNames.jsx'
+import AverageAge from './components/AverageAge.jsx'
 
 const query = 'batman'
-const namesInit = []
+const peopleInit = []
 const firstGet = async () => {
-  const namesInit = await axios.get(`http://localhost:8080/get?name=${query}`)
+  const peopleInit = await axios.get(`http://localhost:8080/get?name=${query}`)
 }
 firstGet()
 
 const App = () => {
 
-  const [names, setNames] = useState(namesInit)
+  const [people, setPeople] = useState(peopleInit)
   const [loading, setLoading] = useState(false)
 
-  const fetchNames = async () => {
+  const fetchPeople = async () => {
     setLoading(true)
     const response = await axios.get(`http://localhost:8080/get`)
-    setNames(response.data)
+    setPeople(response.data)
     setLoading(false)
   }
 
   useEffect(() => {
-    fetchNames()
+    fetchPeople()
   }, [])
 
   const addPerson = (obj) => {
-    console.log('CHECK ADDING OF NAME: ', names, name)
     axios.post(`http://localhost:8080/post`, obj)
       .then(res => {
-        console.log('CHECK ADDING OF NAME: ', names, name)
-        setNames([...names, obj])
+        setPeople([...people, obj])
       })
   }
 
@@ -44,8 +43,9 @@ const App = () => {
     return (
       <div style={{display: 'flex', gap: '2%'}}>
 
-        <AddPerson name={name} addPerson={addPerson} />
-        <ShowNames names={names} />
+        <AddPerson addPerson={addPerson} />
+        <ShowNames people={people} />
+        <AverageAge people={people} />
       </div>
     )
 }

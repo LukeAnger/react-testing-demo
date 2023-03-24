@@ -12,3 +12,33 @@ body {
   gap: 1rem;
   height: 100svh;
 }
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 20vw;
+  margin-right: 2vw;
+}
+
+form label {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+form button {
+  width: fit-content;
+  align-self: center;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: 700;
+  border: none;
+  border-top-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  background-color: rgb(253, 245, 128);
+  color: rgb(58, 54, 54);
+  cursor: pointer;
+}
