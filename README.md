@@ -69,6 +69,19 @@ Here are some examples of how you might use React Testing Library methods in you
 * `screen`: Provides a set of methods for querying the rendered output of your component (e.g. screen.getByText to find an element with specific text).
 * `waitFor`: Allows you to wait for asynchronous events (e.g. a component to update its state or fetch data from an API).
 
+
+##### Queries
+
+* `getBy`: Finds a single element in the component's DOM by a specific query (e.g. `getByTestId` finds an element by its data-testid attribute).
+* `findBy`: Similar to `getBy`, but waits for the element to appear on the page (e.g. `findByText` waits for an element with specific text to appear).
+* `queryBy`: Finds a single element in the component's DOM by a specific query, but returns null if the element is not found (useful for checking if an element does not exist).
+* `getAllBy`: Finds all elements in the component's DOM that match a specific query (e.g. `getAllByRole` finds all elements with a specific ARIA role).
+* `findAllBy`: Similar to `getAllBy`, but waits for the elements to appear on the page.
+* `queryAllBy`: Finds all elements in the component's DOM that match a specific query, but returns an empty array if no elements are found.
+* `getByRole`: Finds an element by its ARIA role (e.g. `getByRole('button')` finds the first button element). This is useful for testing accessibility.
+
+These methods are all part of React Testing Library's API for interacting with a component's DOM. By using these methods, you can find and interact with elements in your component and test its behavior and functionality.
+
 ### Example Tests
 Here are some example tests for a simple `Counter` component:
 
