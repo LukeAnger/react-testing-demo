@@ -13,11 +13,15 @@ describe('ShowNames', () => {
     { name: 'Wonder Woman' },
   ];
 
-  // Test case to check if ShowNames renders a list of names
-  it('renders a list of names', () => {
+  // Test case to check if ShowNames displays the correct list of names when names are provided
+  it('displays a list of names when names are provided', () => {
 
     // Render the ShowNames component with the test names
-    const { getAllByRole } = render(<ShowNames people={testPeople} />);
+    const { getByText, getAllByRole } = render(<ShowNames people={testPeople} />);
+
+    // Check that the component displays the correct heading for the list of names
+    expect(getByText('Names')).toBeInTheDocument();
+
 
     // Get all the list items in the rendered component
     const listItems = getAllByRole('listitem');
@@ -31,13 +35,14 @@ describe('ShowNames', () => {
     });
   });
 
-  // Test case to check if ShowNames renders an empty list when no names are provided
-  it('renders an empty list when no names are provided', () => {
+  // Test case to check if ShowNames displays the correct message when no names are provided
+  it('displays a message when no names are provided', () => {
 
     // Render the ShowNames component with an empty array of names
-    const { queryByRole } = render(<ShowNames people={[]} />);
+    const { getByText } = render(<ShowNames people={[]} />);
 
-    // Check that there is no list element in the rendered component
-    expect(queryByRole('list')).toBeNull();
+    // Check that the component displays the correct message when no names are provided
+    expect(getByText('No names to display')).toBeInTheDocument();
   });
+
 });

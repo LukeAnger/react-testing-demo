@@ -3,16 +3,18 @@ import axios from 'axios';
 import PropTypes from 'prop-types';
 
 const ShowNames = ({ people }) => {
-  if (people.length === 0) return null;
-  console.log('SHOW people: ', people)
+
   return (
     <div style={{display: 'flex', flexDirection: 'column'}}>
       <h3>Names</h3>
+      {people.length > 0 ?
       <ul>
-        {people.map((name, i) => (
-          <li key={i}>{name.name}</li>
-        ))}
-      </ul>
+      {people.map((name, i) => (
+        <li key={i}>{name.name}</li>
+      ))}
+      </ul> :
+      <p>No names to display</p>}
+
     </div>
   );
 }
