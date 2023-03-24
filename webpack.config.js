@@ -33,8 +33,4 @@ module.exports = {
     // [port] what port on our local machine to run the dev server
     port: 3000,
   },
-  output: {
-    path: path.resolve(__dirname, 'build'),
-    filename: 'bundle.js',
-  }
 }

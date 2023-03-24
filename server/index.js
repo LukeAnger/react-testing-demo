@@ -18,9 +18,10 @@ app.get('/get', (req, res) => {
   db.Name.find()
     .then(response => {
       console.log('NAME FIND: ', response)
+      res.send(response)
     })
-    .catch(err => console.log('ERROR', err))
-  res.send('GET request was successful')
+    .catch(err => res.send('GET request was NOT successful'))
+
 })
 
 app.post('/post', (req, res) => {
