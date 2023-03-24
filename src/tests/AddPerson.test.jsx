@@ -5,7 +5,7 @@ import { render, screen, fireEvent } from '@testing-library/react';
 // import jest-dom library for additional matchers
 import '@testing-library/jest-dom';
 // import the AddPerson component being tested
-import AddPerson from './AddPerson';
+import AddPerson from '../components/AddPerson.jsx';
 
 // describe the test suite for AddPerson component
 describe('AddPerson', () => {
@@ -59,6 +59,6 @@ describe('AddPerson', () => {
     expect(nameInput).toHaveValue('');
 
     // assert that the age field was reset
-    expect(ageInput).toHaveValue(null);
+    expect(ageInput).toHaveValue('');
   });
 });

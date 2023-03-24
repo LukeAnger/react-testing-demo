@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import ShowNames from './ShowNames';
+import ShowNames from '../components/ShowNames.jsx';
 
 // Test suite for the ShowNames component
 describe('ShowNames', () => {

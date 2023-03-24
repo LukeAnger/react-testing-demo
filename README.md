@@ -6,6 +6,19 @@ You can also use this repo as a starting point for creating your own MERN stack 
 
 ### Getting Started
 
+## USE THE FOLLOWING INSTRUCTIONS TO ADD REACT/JEST TESTS TO YOUR OWN PROJECT
+To install testing libraries in your own project you will do the following:
+
+* Run `npm install --save-dev testing-library/jest-dom @testing-library/react jest jest-environment-jsdom`
+
+* Add a `jest.config.js` file in your repo directory with the following code:
+```
+module.exports = {
+  testEnvironment: 'jest-environment-jsdom',
+};
+```
+
+## TO CONTINUE WITH THIS REACT-TESTING-DEMO REPO DO THE FOLLOWING
 To get started with this demo, simply clone the repository and run `npm install` to install the dependencies:
 
 ```
