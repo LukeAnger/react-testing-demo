@@ -74,6 +74,8 @@ Here are some examples of how you might use React Testing Library methods in you
 
 #### Queries
 
+##### [cheatsheet](https://testing-library.com/docs/react-testing-library/cheatsheet/)
+
 * `getBy`: Finds a single element in the component's DOM by a specific query (e.g. `getByTestId` finds an element by its data-testid attribute).
 * `findBy`: Similar to `getBy`, but waits for the element to appear on the page (e.g. `findByText` waits for an element with specific text to appear).
 * `queryBy`: Finds a single element in the component's DOM by a specific query, but returns null if the element is not found (useful for checking if an element does not exist).
@@ -147,3 +149,4 @@ If you're new to testing in React, you might find these resources helpful:
 * [Jest Testing](https://jestjs.io/docs/getting-started)
 * [React Testing Library documentation](https://testing-library.com/docs/react-testing-library/intro/)
 * [Testing Library Cheat Sheet](https://testing-library.com/docs/react-testing-library/cheatsheet/)
+* [In depth Youtube Tutorial - The Net Ninja](https://www.youtube.com/watch?v=7dTTFW7yACQ&list=PL4cUxeGkcC9gm4_-5UsNmLqMosM-dzuvQ)
